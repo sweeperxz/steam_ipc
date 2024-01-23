@@ -1,7 +1,7 @@
 #include <Windows.h>
 #include <iostream>
 #include <TlHelp32.h>
-#include "MemoryStream.h"
+#include "gfx/memory_stream.h"
 
 class render_command {
 public:
@@ -25,7 +25,7 @@ public:
         };
 
         const render_command_data data = {
-            3, // render command
+            3, // gfx command
             x0_, y0_, x1_, y1_,
             u0_, v0_, u1_, v1_, uk4_,
             color_start_, color_end_, gradient_direction_, texture_id_
@@ -51,7 +51,7 @@ public:
         };
 
         const render_command_data data = {
-            1, // render command
+            1, // gfx command
             texture_id_, version_, full_update_,
             size_, width_, height_, x_, y_
         };
